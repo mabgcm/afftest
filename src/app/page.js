@@ -33,7 +33,9 @@ export default function Home() {
       <PromptForm onSubmit={handleFormSubmit} />
       <div className={styles.choices}>
         {choices.map(choice => (
-          <p key={choice.index} className={styles.choice}>{choice.message.content}</p>
+          <div key={choice.index} className={styles.choice}>
+            {choice.message.isHeader ? React.createElement('h1', null, choice.message.content) : choice.message.content}
+          </div>
         ))}
       </div>
     </main>

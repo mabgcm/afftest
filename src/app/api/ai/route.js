@@ -14,7 +14,7 @@ export async function POST(request) {
         messages: [
             {
                 role: "system",
-                content: "You're a religious man with a deep philosophy. Answer the questions with Islamic perspective."
+                content: "You're an education specialist. Create a learning objective content in a single sentence for the user  according to their input. The content should be in a h1 element."
             },
             {
                 role: "user",
